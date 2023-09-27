@@ -1,0 +1,15 @@
+.acces {
+    &__title {
+        text-align: center;
+    }
+    &__image {
+        width: 60%;
+        margin: 50px auto;
+
+        & img {
+            width: 100%;
+            height: 560px;
+            object-fit: cover;
+        }
+    }
+}

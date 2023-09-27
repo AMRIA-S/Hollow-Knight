@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+}
+
+main {
+    color: white;
+    margin-left: 13%;
+}
+
+.headerNav-link, .headerNav ul {
+    list-style-type: none;
+    text-decoration: none;
+}
