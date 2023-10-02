@@ -1,0 +1,36 @@
+.equipe {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 400px;
+
+    & li {
+        width: 30%;
+    }
+
+    & figure {
+        text-align: center;
+    }
+
+    & img {
+        width: 50%;
+        height: 204.16px;
+        border-radius: 25px;
+        filter: contrast(0.5);
+        &:hover {
+            filter: none;
+            width: 55%;
+            height: 224.58px;
+        }
+    }
+
+    & h3 {
+        font-size: 20px;
+    }
+
+    & h4 {
+        text-align: left;
+    }
+}

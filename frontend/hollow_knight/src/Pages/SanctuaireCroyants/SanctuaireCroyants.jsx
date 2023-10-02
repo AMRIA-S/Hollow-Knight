@@ -1,11 +1,11 @@
-import acces from '../Assets/Images/acces.png'
-import '../Assets/Styles/Sanctuaire/SanctuaireCroyants.scss'
+import acces from '../../Assets/Images/acces.png'
+import './SanctuaireCroyants.scss'
 
 function SanctuaireCroyants() {
     return (
         <main>
             <section className="acces">
-                <h1 className="acces__title">Hollow Knight</h1>
+                <h1>Hollow Knight</h1>
                 <h2>Comment y accéder ?</h2>
                 <p>
                     Pour accéder au sanctuaire des croyants, vous devez vous

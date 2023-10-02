@@ -1,0 +1,33 @@
+@import '../../Assets/Scss/Variables/colors.scss';
+
+.headerNav {
+    position: fixed;
+    margin-left: 1%;
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    & li {
+        background-image: linear-gradient(map-get($map: $colors, $key: primaire) 0%, map-get($map: $colors, $key: secondaire) 100%);
+        border-radius: 6px;
+        margin-bottom: 2px;
+        box-shadow: 4px 4px 4px 0px #999;
+        border: solid 1px #333A40;
+        
+        &:hover {
+            background: linear-gradient(map-get($map: $colors, $key: primaireSurvol) 0%, map-get($map: $colors, $key: secondaire) 100%);
+        }
+    }
+    .headerNav-link {
+        color: white;
+        font-size: 20px;
+        padding: 10px 20px;
+        display: block;
+    
+        &:hover {
+            font-size: 24px;
+        }
+    }
+}

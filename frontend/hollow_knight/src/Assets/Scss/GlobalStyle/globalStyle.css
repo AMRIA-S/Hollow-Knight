@@ -7,7 +7,11 @@ main {
     margin-left: 13%;
 }
 
-.headerNav-link, .headerNav ul {
+.headerNav-link, .headerNav ul, li, a {
     list-style-type: none;
     text-decoration: none;
+}
+
+ul {
+    padding: 0;
 }
