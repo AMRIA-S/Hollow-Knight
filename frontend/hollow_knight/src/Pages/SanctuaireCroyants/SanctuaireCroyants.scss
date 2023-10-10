@@ -2,13 +2,6 @@
 @import '../../Assets/Scss/Variables/size.scss';
 
 .acces {
-    & h1 {
-        text-align: center;
-        font-size: nth($list: $fontSize, $n: 1);
-    }
-    & h2 {
-        font-size: nth($list: $fontSize, $n: 2);
-    }
     &__image {
         width:nth($list: $percent, $n: 3);
         margin: 50px auto;

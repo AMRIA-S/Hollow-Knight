@@ -1,38 +1,45 @@
-import Equipe from '../../Components/Equipe/Equipe'
-import { createurs, collaborateurs } from '../../Assets/data/createurs'
 import Age from '../../Components/Age/age'
+import Cv from '../../Components/Cv/Cv'
+import cv from '../../Assets/Fichiers/cv_amria_sollene.pdf'
+import './home.scss'
 
 function Home() {
     return (
         <main>
-            <h1>Qui suis-je ?</h1>
-            <p>
-                Bonjour je m'appelle Sollène Amria. J'ai <Age /> ans. Je suis
-                jeune diplômée d'un BAC+2 en développement web.
-            </p>
-            <h2>Team Cherry</h2>
-            <p>
-                Team Cherry est un équipe de jeux indépendant basé à Adelaïde en
-                Australie.
-            </p>
-            <ul className="equipe">
-                {createurs.map((createur) => (
-                    <li key={createur.id}>
-                        <Equipe equipe={createur} />
-                    </li>
-                ))}
-            </ul>
-            <h3>
-                Les personnes qui ont collaboré mais ne font pas partie de
-                l'équipe
-            </h3>
-            <ul className="equipe">
-                {collaborateurs.map((collaborateur) => (
-                    <li key={collaborateur.id}>
-                        <Equipe equipe={collaborateur} />
-                    </li>
-                ))}
-            </ul>
+            <section className="home">
+                <h1>Parlons de moi</h1>
+                <h2>Qui suis-je ?</h2>
+                <p>
+                    Bonjour je m'appelle Sollène Amria. J'ai <Age /> ans. Je
+                    suis jeune diplômée d'un BAC+2 en développement web.
+                </p>
+                <h3>Quel est mon parcours ?</h3>
+                <p>
+                    J'ai effectué un Bac Professionnelle Accueil Relationd
+                    Clients et Usagers (ARCU), puis j'ai poursuivie avec un BTS
+                    Assistant de manager mais j'ai arrêté pour travailler dans
+                    la restauration en tant que serveuse pendant 4 ans. J'ai
+                    décidé de me former au métier du développement web sur
+                    Openclassrooms.
+                </p>
+                <h4>Pourquoi le développement web ?</h4>
+                <p>
+                    J'ai appris le développement grâce à un livre que j'ai
+                    découvert par curiosité. Depuis, j'ai été fasciné et plus
+                    tard je me suis inscrite à la formation sur Openclassrooms.
+                </p>
+                <h5>Vous souhaitez voir plus sur moi ?</h5>
+                <p>Vous consulter mon CV et mon GitHub ci-dessous.</p>
+            </section>
+            <section className="information">
+                <Cv />
+                <a
+                    href={cv}
+                    className="information__lien information__lien--display"
+                >
+                    Mon CV
+                </a>
+            </section>
         </main>
     )
 }

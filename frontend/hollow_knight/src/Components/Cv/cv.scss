@@ -1,0 +1,122 @@
+@import '../../Assets//Scss/Variables//mixin.scss';
+/*480 - 720 tel,
+ 768 - 900 tablette portrait 
+ 900 - 1024 tablette paysage*/
+
+.information {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;    
+
+    @media screen and (min-width: 370px) {
+        justify-content: space-around;
+    }
+    @media screen and (min-width: 600px) {
+        margin-top: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: 1000px) {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    @media screen and (min-width: 1400px) {
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+    }
+
+        &__cv {
+            display: none;
+            
+            @media screen and (min-width: 600px) {
+                display: block;
+                margin-top: 70px;  
+            }
+            
+                &--petit {
+                    @media screen and (min-width: 600px) {
+                        width: 100%;
+                        overflow: hidden;
+                        height: 222px;
+                    }
+                    @media screen and (min-width: 1400px) {
+                        width: 86%;
+                        height: 365px;
+                    }                    
+                }
+                &--grand {
+                    @media screen and (min-width: 600px) {
+                        height: 410px;
+                        width: 100%;
+                        overflow: scroll;
+                    }
+                    @media screen and (min-width: 1000px) {
+                        height: 400px;  
+                    }
+                    @media screen and (min-width: 1000px) {
+                        height: 520px;  
+                    }
+                }
+        }
+    
+        &__button {
+            display: none;
+            &:hover {
+                @include button-hover;
+                cursor: pointer;
+            }
+
+            @media screen and (min-width: 600px) {
+                display: block;
+                @include button;
+                padding: 10px 12px;
+                color: white;
+                font-size: 20px;
+                position: absolute;
+                left: auto;
+            }
+
+            @media screen and (min-width: 1400px) {
+                position: absolute;
+                margin-top: -19.5em;
+            }
+
+            &--cvGrand {
+                @media screen and (min-width: 1400px) {
+                    margin-top: -27.5em;
+                }
+            }
+        }
+
+        &__lien {
+            color: white;
+            font-size: 15px;
+            margin-top: 10px;
+
+            @media screen and (min-width:600px) {
+                margin-top: 20px;
+            }
+            @media screen and (min-width: 480px) {
+                font-size: 16px;
+            }
+
+            &:hover {
+                text-transform: uppercase;
+                text-decoration: underline;
+            }
+
+            &--display {
+                @media screen and (min-width:600px) {
+                   display: none; 
+                }
+                
+            }
+        }
+
+        & img {
+            width: 100%;
+        }
+}

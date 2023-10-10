@@ -1,0 +1,12 @@
+@import './colors.scss';
+
+@mixin button {
+    background-image: linear-gradient(map-get($map: $colors, $key: primaire) 0%, map-get($map: $colors, $key: secondaire) 100%);
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px 0px #999;
+    border: solid 1px #333A40;
+};
+
+@mixin button-hover {
+    background: linear-gradient(map-get($map: $colors, $key: primaireSurvol) 0%, map-get($map: $colors, $key: secondaire) 100%);
+};

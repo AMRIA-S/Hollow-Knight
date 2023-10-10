@@ -1,33 +1,92 @@
 @import '../../Assets/Scss/Variables/colors.scss';
+@import '../../Assets/Scss/Variables/mixin.scss';
 
-.headerNav {
-    position: fixed;
-    margin-left: 1%;
+/*480 - 720 tel, 
+768 - 900 tablette tablette portrait 
+900 - 1024 tablette paysage*/
 
-    & ul {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+header { 
+    position: initial;
+    margin-right: 20px;
+
+    @media screen and (min-width: 1000px) {
+        position: fixed;
+        margin-left: 1em;
     }
-    & li {
-        background-image: linear-gradient(map-get($map: $colors, $key: primaire) 0%, map-get($map: $colors, $key: secondaire) 100%);
-        border-radius: 6px;
-        margin-bottom: 2px;
-        box-shadow: 4px 4px 4px 0px #999;
-        border: solid 1px #333A40;
-        
-        &:hover {
-            background: linear-gradient(map-get($map: $colors, $key: primaireSurvol) 0%, map-get($map: $colors, $key: secondaire) 100%);
+    .headerNav {
+        & button {
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            @media screen and (min-width: 600px) {
+                display: none;
+            }
         }
+        & ul {
+            flex-direction: column;
+            align-items: stretch;
+            margin-left: 80px;
+            margin-top: -40px;
+            
+            @media screen and (min-width: 600px) {
+                flex-direction: row;
+                justify-content: center;
+                margin: 0;
+            }
+            @media screen and (min-width: 1000px) {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            & li {
+                @include button;
+                margin-bottom: 2px;
+
+                @media screen and (min-width: 600px) {
+                    margin-right: 20px;
+                }
+                
+                &:hover {
+                    @include button-hover;
+                }
+            }
+        }
+        &--MenuFerme {
+            display: none;
+
+            @media screen and (min-width: 600px) {
+                display: flex;
+            }  
+        }
+        &--MenuOuvert {
+            @media screen and (min-width: 600px) {
+                display: flex;
+            }  
     }
-    .headerNav-link {
-        color: white;
-        font-size: 20px;
-        padding: 10px 20px;
-        display: block;
-    
-        &:hover {
-            font-size: 24px;
+        .headerNav-link {
+            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            display: block;
+
+            @media screen and (min-width: 1000px) {
+                font-size: 16px;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 20px;
+            }
+        
+            &:hover {
+                font-size: 24px;
+
+                @media screen and (min-width: 1000px) {
+                    font-size: 18px;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 21px;
+                }
+            }
         }
     }
 }

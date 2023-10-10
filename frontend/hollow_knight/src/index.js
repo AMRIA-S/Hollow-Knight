@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import './Assets/Scss/GlobalStyle/globalStyle.css'
+import './index.scss'
 import Home from './Pages/Home/Home';
 import SanctuaireCroyants from './Pages/SanctuaireCroyants/SanctuaireCroyants';
 import Header from './Components/Header/Header';
+import TeamCherry from './Pages/TeamCherry.jsx/TeamCherry';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +15,8 @@ root.render(
       <Header />
       <Routes>
         <Route path='/' element={< Home/> } />
-        <Route path='/hollow-knight' element={< SanctuaireCroyants/> } />
+        <Route path='/hollow-knight' element={< SanctuaireCroyants />} />
+        <Route path='/team-cherry' element={<TeamCherry />} />
       </Routes>
     </Router>
     
