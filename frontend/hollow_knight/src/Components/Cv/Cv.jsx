@@ -1,4 +1,4 @@
-import Ex from '../../Assets/Fichiers/cv.jpg'
+import ImageCv from '../../Assets/Fichiers/cv.jpg'
 import './cv.scss'
 import { useState } from 'react'
 
@@ -14,7 +14,7 @@ function Cv() {
                         : 'information__cv information__cv--petit'
                 }
             >
-                <img src={Ex} alt="dsds" />
+                <img src={ImageCv} alt="dsds" />
             </div>
             <button
                 className={

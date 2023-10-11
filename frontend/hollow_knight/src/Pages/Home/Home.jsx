@@ -1,6 +1,6 @@
 import Age from '../../Components/Age/age'
 import Cv from '../../Components/Cv/Cv'
-import cv from '../../Assets/Fichiers/cv_amria_sollene.pdf'
+import CvPdf from '../../Assets/Fichiers/cv_amria_sollene.pdf'
 import './home.scss'
 
 function Home() {
@@ -34,7 +34,7 @@ function Home() {
             <section className="information">
                 <Cv />
                 <a
-                    href={cv}
+                    href={CvPdf}
                     className="information__lien information__lien--display"
                 >
                     Mon CV

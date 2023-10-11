@@ -1,8 +1,9 @@
-@import 'Assets/Scss/Variables/size.scss';
-@import 'Assets/Scss//Variables/colors.scss';
+@import 'Assets/Scss/size.scss';
+@import 'Assets/Scss/colors.scss';
 
 body {
     background-color: black;
+    margin: 0;
 };
 
 main {
