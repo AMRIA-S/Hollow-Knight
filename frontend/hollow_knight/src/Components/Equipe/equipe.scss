@@ -1,36 +1,91 @@
 .equipe {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    min-height: 400px;
+    flex-direction: column;
+
+    @media screen and (min-width:600px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
     & li {
-        width: 30%;
-    }
+        width: 100%;
 
-    & figure {
-        text-align: center;
-    }
-
-    & img {
-        width: 50%;
-        height: 204.16px;
-        border-radius: 25px;
-        filter: contrast(0.5);
-        &:hover {
-            filter: none;
-            width: 55%;
-            height: 224.58px;
+        @media screen and (min-width:600px) {
+            width: 30%;
         }
     }
 
-    & h3 {
-        font-size: 20px;
+    & figure {
+        margin: 0 0 20px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @media screen and (min-width:600px) {
+            justify-content: center;
+        }
     }
 
-    & h4 {
-        text-align: left;
+    & figcaption {
+        width: 60%;
+
+        @media screen and (min-width:600px) {
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+
+        & h3 {
+            margin: 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: overline underline;
+            text-decoration-color: #00b6ff;
+            text-underline-offset: 10px;
+
+            @media screen and (min-width:600px) {
+                text-align: center;
+                margin-top: 14px;
+                font-size: 15px;
+            }
+            @media screen and (min-width:768px) {
+                font-size: 18px;
+            }
+        }
+        & p {
+            margin: 14px 0 0 0;
+            font-size: 12px;
+            text-align: justify;
+
+            @media screen and (min-width:768px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    & img {
+        width: 5.5rem;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 25px;
+        filter: contrast(0.5);
+
+        @media screen and (min-width:600px) {
+            width: 9rem;
+            height: 136px;
+        }
+
+        &:hover {
+            filter: none;
+            width: 6rem;
+
+            @media screen and (min-width:600px) {
+                width: 9.5rem;
+                height: 139px;
+            }
+        }
     }
 }

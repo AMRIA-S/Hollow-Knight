@@ -2,6 +2,7 @@ import './equipe.scss'
 
 function Equipe(props) {
     const equipe = props.equipe
+
     return (
         <>
             <figure>
@@ -11,7 +12,7 @@ function Equipe(props) {
                 />
                 <figcaption>
                     <h3>{equipe.name}</h3>
-                    <h4>{equipe.role}</h4>
+                    <p>{equipe.role}</p>
                 </figcaption>
             </figure>
         </>

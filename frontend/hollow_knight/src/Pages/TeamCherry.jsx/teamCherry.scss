@@ -1,0 +1,9 @@
+.presentation {
+    & h2, h5 {
+        font-size: 16px;
+
+        @media screen and (min-width: 600px) {
+            font-size: 20px;
+        }
+    }
+}

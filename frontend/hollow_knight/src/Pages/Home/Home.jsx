@@ -1,7 +1,6 @@
 import Age from '../../Components/Age/age'
 import Cv from '../../Components/Cv/Cv'
 import CvPdf from '../../Assets/Fichiers/cv_amria_sollene.pdf'
-import './home.scss'
 
 function Home() {
     return (
@@ -28,17 +27,19 @@ function Home() {
                     découvert par curiosité. Depuis, j'ai été fasciné et plus
                     tard je me suis inscrite à la formation sur Openclassrooms.
                 </p>
+            </section>
+            <section>
                 <h5>Vous souhaitez voir plus sur moi ?</h5>
                 <p>Vous consulter mon CV et mon GitHub ci-dessous.</p>
-            </section>
-            <section className="information">
-                <Cv />
-                <a
-                    href={CvPdf}
-                    className="information__lien information__lien--display"
-                >
-                    Mon CV
-                </a>
+                <div className="information">
+                    <Cv />
+                    <a
+                        href={CvPdf}
+                        className="information__lien information__lien--display"
+                    >
+                        Mon CV
+                    </a>
+                </div>
             </section>
         </main>
     )
