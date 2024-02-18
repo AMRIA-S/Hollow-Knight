@@ -16,8 +16,8 @@ root.render(
       <Header />
       <Routes>
         <Route path='/' element={< Home/> } />
-        <Route path='/hollow-knight' element={< SanctuaireCroyants />} />
-        <Route path='/team-cherry' element={<TeamCherry />} />
+        <Route path='/sanctuaire_croyant' element={< SanctuaireCroyants />} />
+        <Route path='/team_cherry' element={<TeamCherry />} />
       </Routes>
       <Footer />
     </Router>

@@ -9,7 +9,7 @@ function TeamCherry() {
     return (
         <main>
             <section className="presentation">
-                <h1>La team Cherry</h1>
+                <h1>Team Cherry</h1>
                 <h2>
                     Team Cherry est une petite équipe de créateurs de jeux
                     indépendants basé à Adelaïde en Australie.

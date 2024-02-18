@@ -22,13 +22,13 @@ function Menu() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/team-cherry" className="headerNav-link">
+                    <Link to="/team_cherry" className="headerNav-link">
                         Team Cherry
                     </Link>
                 </li>
                 <li>
-                    <Link className="headerNav-link" to="/hollow-knight">
-                        Hollow Knight
+                    <Link to="/sanctuaire_croyant" className="headerNav-link">
+                        Sanctuaire des croyants
                     </Link>
                 </li>
             </ul>
